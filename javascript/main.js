@@ -15,7 +15,5 @@ const getData = () => {fetch(url)
         document.getElementById("tel-number").innerHTML = data.results[0].cell;
         document.getElementById("location").innerHTML = data.results[0].location.country;
         document.getElementById("email").innerHTML = data.results[0].email;
-        console.log(data)
-        
     });
 }
