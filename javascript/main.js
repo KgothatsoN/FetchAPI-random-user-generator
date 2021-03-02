@@ -9,9 +9,12 @@ button.addEventListener("click", (e) => {
 const getData = () => {fetch(url)
     .then(res => res.json())
     .then(data => {
+        document.getElementById("image").src = data.results[0].picture["large"];
         document.getElementById("fname").innerHTML = data.results[0].name["first"];
         document.getElementById("lname").innerHTML = data.results[0].name["last"];
         document.getElementById("tel-number").innerHTML = data.results[0].cell;
         document.getElementById("email").innerHTML = data.results[0].email;
+        console.log(data)
+        
     });
 }
