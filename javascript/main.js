@@ -13,6 +13,7 @@ const getData = () => {fetch(url)
         document.getElementById("fname").innerHTML = data.results[0].name["first"];
         document.getElementById("lname").innerHTML = data.results[0].name["last"];
         document.getElementById("tel-number").innerHTML = data.results[0].cell;
+        document.getElementById("location").innerHTML = data.results[0].location.country;
         document.getElementById("email").innerHTML = data.results[0].email;
         console.log(data)
         
