@@ -1,13 +1,17 @@
 const button = document.getElementById("btn");
 url = 'https://randomuser.me/api/';
 
+// Button event
 button.addEventListener("click", (e) => {
     e.preventDefault();
     getData();
 })
 
+// Get user data using Fetch
 const getData = () => {fetch(url)
+    // Fetch json file
     .then(res => res.json())
+    // set elements to following data from array
     .then(data => {
         document.getElementById("image").src = data.results[0].picture["large"];
         document.getElementById("fname").innerHTML = data.results[0].name["first"];
